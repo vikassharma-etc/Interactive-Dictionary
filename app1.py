@@ -6,8 +6,7 @@ from difflib import get_close_matches
 data = json.load(open("resources/data.json"))
 
 def translate(word):
-    word=word.lower()
-    if word in data.keys():
+    if word.lower() in data.keys():
         return data[word]
     elif word.title() in data.keys():
         return data[word.title()]
